@@ -1,0 +1,95 @@
+body {
+    min-height: 100%;
+}
+
+.catalogWrapper {
+    min-height: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+.catalog-main {
+    color: #fff;
+    padding: 7em 3em 7em 3em;
+    flex-grow: 1;
+    display: flex;
+    
+    justify-content: center;
+    /* align-items: center; */
+    gap: 50px;
+    
+    min-height: 89vh; 
+    background: #acec15;
+    background: conic-gradient(from 315deg, #acec15, #010101);
+    background-size: cover;
+    background-position: center;
+    /* min-height: 100%; */
+}
+
+.card-container {
+    display: flex;
+    gap: 1em;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 700px;
+    align-items: center;
+    margin: 0 auto;
+    /* padding: 50px;
+    border: 2px solid black;
+    border-radius: 30px; */
+}
+
+.containerForContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #3b3b3ba1;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 0px 50px 0px 50px;
+    margin: 0 auto;
+    height: 50vh;
+    align-items: center;
+}
+
+.test {
+    display: flex;
+    gap: 30px;
+}
+
+/* опит за стилизиране на каталога */
+
+.catalog-information {
+    color: #fff;
+    padding: 20px;
+    background: #3b3b3ba1;
+    margin: 0 auto;
+    height: 50vh;
+    border-radius: 30px;
+}
+
+/* .introduction-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+.catalog-title {
+    text-align: center;
+    padding: 30px 20px 20px 20px ;
+    border-bottom: 2px solid;
+}
+
+.catalog-paragraph {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 30px 30px 20px;
+    text-align: center;
+    font-size: 20px;
+}
+

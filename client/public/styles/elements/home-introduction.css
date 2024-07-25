@@ -1,0 +1,26 @@
+.introduction {
+    color: #fff;
+    padding: 20px;
+    background: #3b3b3ba1;
+    margin: 0 auto;
+    /* height: 400px;
+    border-radius: 30px; */
+}
+
+/* .introduction-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+.introduction-title {
+    text-align: center;
+    /* padding-bottom: 30px;
+    border-bottom: 2px solid; */
+}
+
+.introduction-paragraph {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}

@@ -1,0 +1,13 @@
+@import '../styles/base/site-base.css';
+@import '../styles/components/site-navigation.css';
+@import 'home.css';
+@import 'loginAndRegister.css';
+@import 'register.css';
+@import 'catalog.css';
+@import '../styles/elements/home-imagesPart.css';
+@import '../styles/elements/catalog-cards.css';
+@import '../styles/elements/home-introduction.css';
+@import url(add.css);
+@import '../styles/components/footer.css';
+@import '../styles/pages/details.css';
+@import '../styles/components/detailsCard.css';

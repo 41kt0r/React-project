@@ -1,0 +1,19 @@
+.addContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #acec15;
+    background: conic-gradient(from 315deg, #acec15, #010101);
+    background-size: cover;
+    background-position: center;
+    padding-top: 40px;
+    
+}
+
+
+
+/* .input-box input[type="text"][placeholder="Description"] {
+    height: 150px; 
+    white-space: break-word;
+} */
