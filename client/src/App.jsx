@@ -1,9 +1,11 @@
+import Header from "./components/headre/Headre"
+
 function App() {
 
   return (
-    <>
-      <h1>Some title here</h1>
-    </>
+    <div class="homeWrapper">
+      <Header />
+    </div>
   )
 }
 
