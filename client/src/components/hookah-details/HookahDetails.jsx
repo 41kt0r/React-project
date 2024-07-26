@@ -1,52 +1,52 @@
 export default function HookahDetails() {
     return (
-        <div class="detailsWrapper">
+        <div className="detailsWrapper">
             <header>
-                <nav class="navigation">
+                <nav className="navigation">
 
-                    <ul class="nav-bar">
-                        <li class="logo"><a href="_home.html"><img src="../../images/mainLogo.png" alt="logo"/></a></li>
+                    <ul className="nav-bar">
+                        <li className="logo"><a href="_home.html"><img src="../../images/mainLogo.png" alt="logo"/></a></li>
 
                         <input type="checkbox" id="check" />
-                            <span class="menu">
-                                <div class="navigation-div">
+                            <span className="menu">
+                                <div className="navigation-div">
                                     <li><a href="_catalog.html">Catalog</a></li>
                                 </div>
-                                <div class="navigation-div guest">
+                                <div className="navigation-div guest">
                                     <li><a href="_login.html">Login</a></li>
                                     <li><a href="_register.html">Register</a></li>
                                 </div>
-                                <div class="navigation-div user">
+                                <div className="navigation-div user">
                                     <li><a href="_add.html">Add car</a></li>
                                     <li><a href="#">Logout</a></li>
                                 </div>
-                                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                                <label for="check" className="close-menu"><i className="fas fa-times"></i></label>
                             </span>
-                            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                            <label for="check" className="open-menu"><i className="fas fa-bars"></i></label>
                     </ul>
                 </nav>
             </header>
 
-            <main class="details-main">
-                <div class="cardInfo">
-                    <div class="imageAndButtons">
-                        <div class="details__image">
-                            <img class="current__img" src="../../images/Carro fixed.jpg" alt="" />
+            <main className="details-main">
+                <div className="cardInfo">
+                    <div className="imageAndButtons">
+                        <div className="details__image">
+                            <img className="current__img" src="../../images/Carro fixed.jpg" alt="" />
                         </div>
-                        <div class="card__likes">
+                        <div className="card__likes">
                             <p>Likes:</p>
                             <P>155</P>
                         </div>
-                        <div class="details__button">
-                            <div class="owner__buttons">
-                                <button class="detBtn">Like</button>
-                                {/* <!-- <button class="detBtn">Coment</button> --> */}
+                        <div className="details__button">
+                            <div className="owner__buttons">
+                                <button className="detBtn">Like</button>
+                                {/* <!-- <button className="detBtn">Coment</button> --> */}
                             </div>
 
                         </div>
                     </div>
-                    <div class="details__info">
-                        <div class="about__card">
+                    <div className="details__info">
+                        <div className="about__card">
                             <div>
                                 <h5>HOOKAH</h5>
                                 <p>Fantom</p>
@@ -75,8 +75,8 @@ export default function HookahDetails() {
 
                         </div>
 
-                        <div class="guest__buttons">
-                            <button class="detBtn">Edit</button>
+                        <div className="guest__buttons">
+                            <button className="detBtn">Edit</button>
                         </div>
                     </div>
                 </div>

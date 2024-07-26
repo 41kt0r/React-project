@@ -1,6 +1,6 @@
 export default function Catalog() {
     return (
-        <div class="catalogWrapper">
+        <div className="catalogWrapper">
             <main className="catalog-main">
                 <div className="test">
                     <div className="catalog-information">

@@ -10,14 +10,14 @@ SoftUni React Project
  - [x] Add base vite react prject as client
  - [x] CleanUp client
  - [x] Add project resources
- - [ ] Convert html to jsx
- - [ ] Separate html into components 
+ - [x] Convert html to jsx
+ - [x] Separate html into components 
 
 ## 2. React route
  - [x] Install "react-router-dom"
  - [x] Setup react-router-dom
- - [ ] Add routes in App.jsx
- - [ ] Add links in the navigation
+ - [x] Add routes in App.jsx
+ - [x] Add links in the navigation
 
 ## 3. Create Service Layer
 - [ ] Service Layer Archetecture (discusion)

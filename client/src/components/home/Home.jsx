@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-        <div class="homeWrapper">
+        <div className="homeWrapper">
             <main className="home-main">
                 <div className="introduction">
                     <div className="introduction-heading">

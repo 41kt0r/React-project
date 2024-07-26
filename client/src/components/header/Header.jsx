@@ -1,27 +1,29 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
    return (
     <header>
-    <nav class="navigation">
+    <nav className="navigation">
 
-        <ul class="nav-bar">
-            <li class="logo"><a href="_home.html"><img src="../../images/mainLogo.png" alt="logo"/></a></li>
+        <ul className="nav-bar">
+            <li className="logo"><Link to="/"><img src="../../images/mainLogo.png" alt="logo"/></Link></li>
 
             <input type="checkbox" id="check"/>
-            <span class="menu">
-                <div class="navigation-div">
-                    <li><a href="_catalog.html">Catalog</a></li>
+            <span className="menu">
+                <div className="navigation-div">
+                    <li><Link to="/catalog">Catalog</Link></li>
                 </div>
-                <div class="navigation-div guest">
-                    <li><a href="_login.html">Login</a></li>
-                    <li><a href="_register.html">Register</a></li>
+                <div className="navigation-div guest">
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/register">Register</Link></li>
                 </div>
-                <div class="navigation-div user">
-                    <li><a href="_add.html">Add set</a></li>
-                    <li><a href="#">Logout</a></li>
+                <div className="navigation-div user">
+                    <li><Link to="/addSet">Add set</Link></li>
+                    <li><Link to="#">Logout</Link></li>
                 </div>
-                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                <label htmlFor="check" className="close-menu"><i className="fas fa-times"></i></label>
             </span>
-            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            <label htmlFor="check" className="open-menu"><i className="fas fa-bars"></i></label>
         </ul>
     </nav>
 </header>
