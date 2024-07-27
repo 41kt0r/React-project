@@ -1,4 +1,16 @@
+import { useEffect } from "react";
+// import * as request from "../../api/requester";
+
 export default function Catalog() {
+    // useEffect(() => {
+    //     (async () => {
+    //         //const setsResult = await requester('GET', 'http://localhost:3030/jsonstore/sets')
+    //         const setsResult = await request.get('http://localhost:3030/jsonstore/sets')
+    //         console.log(setsResult);
+    //     })();
+    // })
+
+
     return (
         <div className="catalogWrapper">
             <main className="catalog-main">

@@ -20,9 +20,9 @@ SoftUni React Project
  - [x] Add links in the navigation
 
 ## 3. Create Service Layer
-- [ ] Service Layer Archetecture (discusion)
-- [ ] Abstract requester
-- [ ] Add games api 
+- [x] Service Layer Archetecture (discusion)
+- [x] Abstract requester
+- [ ] Add set api 
 - [ ] Preceed practice server 
   
 
