@@ -1,14 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import * as setsAPI from '../../api/sets-api';
 // import * as request from "../../api/requester";
 
 export default function Catalog() {
-    // useEffect(() => {
-    //     (async () => {
-    //         //const setsResult = await requester('GET', 'http://localhost:3030/jsonstore/sets')
-    //         const setsResult = await request.get('http://localhost:3030/jsonstore/sets')
-    //         console.log(setsResult);
-    //     })();
-    // })
+    const [sets, setSets] = useState([]);
+
+    useEffect(() => {
+        setsAPI.getAll()
+            .then(result => setSets(result)) 
+    }, []);
 
 
     return (

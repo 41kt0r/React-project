@@ -22,7 +22,7 @@ SoftUni React Project
 ## 3. Create Service Layer
 - [x] Service Layer Archetecture (discusion)
 - [x] Abstract requester
-- [ ] Add set api 
+- [x] Add sets api 
 - [ ] Preceed practice server 
   
 
