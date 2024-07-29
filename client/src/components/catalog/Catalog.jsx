@@ -28,7 +28,10 @@ export default function Catalog() {
                     <div className="containerForContainer">
                         <div className="card-container">
                             
-                            {sets.map(set => <CatalogItem key={set._id} {...set}/> )}
+                            {sets.length > 0 
+                                ? sets.map(set => <CatalogItem key={set._id} {...set}/> )
+                                : <h3>No sets yet</h3>
+                            }
                             
 
 
