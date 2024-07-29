@@ -25,7 +25,7 @@ export default function HookahDetails() {
                         </div>
                         <div className="card__likes">
                             <p>Likes:</p>
-                            <p>155</p>
+                            <p>{set.likes}</p>
                         </div>
                         <div className="details__button">
                             <div className="owner__buttons">
