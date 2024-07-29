@@ -6,8 +6,8 @@
 
 .details-main {
     color: #fff;
-    background: #01FFF9;
-    background: conic-gradient(from 315deg, #01FFF9, #010101);
+    background: #acec15;
+    background: conic-gradient(from 315deg, #acec15, #010101);
     padding: 2em;
     flex-grow: 1;
     display: flex;
