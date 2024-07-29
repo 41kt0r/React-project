@@ -7,6 +7,7 @@ import Login from "./components/login/Login"
 import Register from "./components/register/Register"
 import Catalog from "./components/catalog/Catalog"
 import AddSet from "./components/add-set/AddSet"
+import HookahDetails from "./components/hookah-details/HookahDetails"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/catalog" element={<Catalog />} />
+        <Route path="/catalog/:setId/details" element={<HookahDetails/>} />
         <Route path="/addSet" element={<AddSet />} />
 
       </Routes>

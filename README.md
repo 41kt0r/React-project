@@ -27,11 +27,11 @@ SoftUni React Project
   
 
 ## 4. Page Implementations
- - [ ] Sets List
+ - [x] Sets List(Catalog)
  - [ ] Details
-     - [ ] Details link
-     - [ ] Details route
-     - [ ] API function - get one
+     - [x] Details link
+     - [x] Details route
+     - [x] API function - get one
      - [ ] Comments
  - [ ] Home - Latest games
 

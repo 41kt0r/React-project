@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function CatalogItem({
     _id,
     hookah,
@@ -21,7 +23,7 @@ export default function CatalogItem({
                     <p>{price}</p>
                 </div>
             </div>
-            <li><a className="seeCar__btn" href="">See the set</a></li>
+            <li><Link className="seeCar__btn" to={`/catalog/${_id}/details`}>See the set</Link></li>
         </div>
     );
 }

@@ -9,3 +9,12 @@
 
     return sets;
  };
+
+ export const getOne = (setId) => request.get(`${BASE_URL}/${setId}`);
+
+ const setsApi = {
+    getAll,
+    getOne
+ }
+
+ export default setsApi;

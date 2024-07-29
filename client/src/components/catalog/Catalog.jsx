@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+
 import * as setsAPI from '../../api/sets-api';
+
 import CatalogItem from "./CatalogItem";
-// import * as request from "../../api/requester";
 
 export default function Catalog() {
     const [sets, setSets] = useState([]);

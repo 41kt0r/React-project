@@ -1,41 +1,31 @@
+import { useEffect, useState } from "react";
+import setsApi from "../../api/sets-api";
+import { useParams } from "react-router-dom";
+
 export default function HookahDetails() {
+    const [set, setSet] = useState({});
+    const {setId} = useParams()
+
+    useEffect(() => {
+        (async () => {
+            const result = await setsApi.getOne(setId);
+
+            setSet(result);
+        })()
+    })
+
     return (
         <div className="detailsWrapper">
-            <header>
-                <nav className="navigation">
-
-                    <ul className="nav-bar">
-                        <li className="logo"><a href="_home.html"><img src="../../images/mainLogo.png" alt="logo"/></a></li>
-
-                        <input type="checkbox" id="check" />
-                            <span className="menu">
-                                <div className="navigation-div">
-                                    <li><a href="_catalog.html">Catalog</a></li>
-                                </div>
-                                <div className="navigation-div guest">
-                                    <li><a href="_login.html">Login</a></li>
-                                    <li><a href="_register.html">Register</a></li>
-                                </div>
-                                <div className="navigation-div user">
-                                    <li><a href="_add.html">Add car</a></li>
-                                    <li><a href="#">Logout</a></li>
-                                </div>
-                                <label for="check" className="close-menu"><i className="fas fa-times"></i></label>
-                            </span>
-                            <label for="check" className="open-menu"><i className="fas fa-bars"></i></label>
-                    </ul>
-                </nav>
-            </header>
 
             <main className="details-main">
                 <div className="cardInfo">
                     <div className="imageAndButtons">
                         <div className="details__image">
-                            <img className="current__img" src="../../images/Carro fixed.jpg" alt="" />
+                            <img className="current__img" src={set.imageUrl} alt="" />
                         </div>
                         <div className="card__likes">
                             <p>Likes:</p>
-                            <P>155</P>
+                            <p>155</p>
                         </div>
                         <div className="details__button">
                             <div className="owner__buttons">
@@ -49,27 +39,27 @@ export default function HookahDetails() {
                         <div className="about__card">
                             <div>
                                 <h5>HOOKAH</h5>
-                                <p>Fantom</p>
+                                <p>{set.hookah}</p>
                             </div>
 
                             <div>
                                 <h5>BOWL</h5>
-                                <p>Dechini</p>
+                                <p>{set.bowl}</p>
                             </div>
 
                             <div>
                                 <h5>HMD</h5>
-                                <p>Flumant</p>
+                                <p>{set.HMD}</p>
                             </div>
 
                             <div>
                                 <h5>DESCRIPTION</h5>
-                                <p>Some description for card about the car and other stupid things</p>
+                                <p>{set.description}</p>
                             </div>
 
                             <div>
                                 <h5>Price</h5>
-                                <p>299$</p>
+                                <p>{set.price}</p>
                             </div>
 
 
