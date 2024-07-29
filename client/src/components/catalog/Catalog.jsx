@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import * as setsAPI from '../../api/sets-api';
+import CatalogItem from "./CatalogItem";
 // import * as request from "../../api/requester";
 
 export default function Catalog() {
@@ -26,47 +27,10 @@ export default function Catalog() {
                     </div>
                     <div className="containerForContainer">
                         <div className="card-container">
-                            <div className="catalog-singleCard">
-                                <div className="img-container">
-                                    <img className="car-img"
-                                        src="../../images/set 1.jpg"
-                                        alt="" />
-                                </div>
-                                <div className="car-info">
-                                    <h5>Set title</h5>
-                                    <div className="card-author">
-                                        <p>Author:</p>
-                                        <p>pipi</p>
-                                    </div>
-                                </div>
-                                <li><a className="seeCar__btn" href="">See the set</a></li>
-                            </div>
-                            <div className="catalog-singleCard">
-                                <div className="img-container">
-                                    <img className="car-img" src="../../images/set 2.webp" alt="" />
-                                </div>
-                                <div className="car-info">
-                                    <h5>Set title</h5>
-                                    <div className="card-author">
-                                        <p>Author:</p>
-                                        <p>pipi</p>
-                                    </div>
-                                </div>
-                                <li><a className="seeCar__btn" href="">See the set</a></li>
-                            </div>
-                            <div className="catalog-singleCard">
-                                <div className="img-container">
-                                    <img className="car-img" src="../../images/set 3.jpg" alt="" />
-                                </div>
-                                <div className="car-info">
-                                    <h5>Set title</h5>
-                                    <div className="card-author">
-                                        <p>Author:</p>
-                                        <p>pipi</p>
-                                    </div>
-                                </div>
-                                <li><a className="seeCar__btn" href="">See the set</a></li>
-                            </div>
+                            
+                            {sets.map(set => <CatalogItem key={set._id} {...set}/> )}
+                            
+
 
                         </div>
                     </div>

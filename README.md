@@ -23,11 +23,11 @@ SoftUni React Project
 - [x] Service Layer Archetecture (discusion)
 - [x] Abstract requester
 - [x] Add sets api 
-- [ ] Preceed practice server 
+- [x] Preceed practice server 
   
 
 ## 4. Page Implementations
- - [ ] Game List
+ - [ ] Sets List
  - [ ] Details
      - [ ] Details link
      - [ ] Details route
