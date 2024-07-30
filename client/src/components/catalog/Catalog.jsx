@@ -1,17 +1,8 @@
-import { useEffect, useState } from "react";
-
-import * as setsAPI from '../../api/sets-api';
-
+import { useGetAllSets } from "../../hooks/useSets";
 import CatalogItem from "./CatalogItem";
 
 export default function Catalog() {
-    const [sets, setSets] = useState([]);
-
-    useEffect(() => {
-        setsAPI.getAll()
-            .then(result => setSets(result)) 
-    }, []);
-
+    const [sets] = useGetAllSets();
 
     return (
         <div className="catalogWrapper">
