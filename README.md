@@ -35,10 +35,11 @@ SoftUni React Project
 
 ## 5. Api Hooks
  - [x] Form hook
- - [ ] SetApi hooks
+ - [x] SetApi hooks
 
 ## 6. Authentication
  - [ ] Auth API
+      - [x] login
  - [ ] Auth API hook
  - [ ] Auth state & context
  - [ ] Login
