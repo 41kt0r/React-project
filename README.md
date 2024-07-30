@@ -28,16 +28,25 @@ SoftUni React Project
 
 ## 4. Page Implementations
  - [x] Sets List(Catalog)
- - [ ] Details
+ - [x] Details
      - [x] Details link
      - [x] Details route
      - [x] API function - get one
-     - [ ] Comments
- - [ ] Home - Latest games
 
-## 5. Comments (advanced)
- - [ ] Create service fornested rsource comments
- - [ ] Post comment to server
- - [ ] Read comments from server
- - [ ] Add comments in the component
- - [ ] Clear form
+## 5. Api Hooks
+ - [ ] Form hook
+ - [ ] SetApi hooks
+
+## 6. Authentication
+ - [ ] Auth API
+ - [ ] Auth API hook
+ - [ ] Auth state & context
+ - [ ] Login
+ - [ ] Register
+ - [ ] Logout
+  
+  ## 7. UI implementation
+ - [ ] Dynamic Navigation
+ - [ ] Create set
+     - [ ] API function
+     - [ ] Create hook
