@@ -12,3 +12,21 @@ export function useGetAllSets() {
 
     return [sets, setSets];
 }
+
+export function useGetOneSets(setId) {
+    const [set, setSet] = useState({});
+
+
+    useEffect(() => {
+        (async () => {
+            const result = await setsApi.getOne(setId);
+
+            setSet(result);
+        })()
+    }, [setId]);
+
+    return [
+        set,
+        setSet,
+    ];
+}

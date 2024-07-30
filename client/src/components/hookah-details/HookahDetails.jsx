@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
-import setsApi from "../../api/sets-api";
+import {  useState } from "react";
 import { useParams } from "react-router-dom";
+import { useGetOneSets } from "../../hooks/useSets";
 
 export default function HookahDetails() {
-    const [set, setSet] = useState({});
     const {setId} = useParams()
-
-    useEffect(() => {
-        (async () => {
-            const result = await setsApi.getOne(setId);
-
-            setSet(result);
-        })()
-    })
+    const [set, setSet] = useGetOneSets(setId);
 
     return (
         <div className="detailsWrapper">
