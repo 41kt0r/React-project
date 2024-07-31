@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom"
+import { useState } from "react"
 
 import Footer from "./components/footer/Footer"
 import Header from "./components/header/Header"
@@ -8,26 +9,41 @@ import Register from "./components/register/Register"
 import Catalog from "./components/catalog/Catalog"
 import AddSet from "./components/add-set/AddSet"
 import HookahDetails from "./components/hookah-details/HookahDetails"
+import { AuthContext } from "./contexts/AuthContext"
 
 function App() {
+  const [authState, setAuthState] = useState({});
+
+  const changeAuthState = (state) => {
+    setAuthState(state)
+  }
+
+  const contextData = {
+    email: authState.email,
+    accessToken: authState.accessToken,
+    isAuthenticated: !!authState.email,
+    changeAuthState,
+  };
 
   return (
-    <>
-      <Header />
+    <AuthContext.Provider value={contextData}>
+      <>
+        <Header />
 
-      <Routes >
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/catalog/:setId/details" element={<HookahDetails/>} />
-        <Route path="/addSet" element={<AddSet />} />
+        <Routes >
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/catalog/:setId/details" element={<HookahDetails />} />
+          <Route path="/addSet" element={<AddSet />} />
 
-      </Routes>
+        </Routes>
 
-      <Footer />
+        <Footer />
 
-    </>
+      </>
+    </AuthContext.Provider>
   )
 }
 

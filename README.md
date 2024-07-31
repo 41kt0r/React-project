@@ -40,11 +40,18 @@ SoftUni React Project
 ## 6. Authentication
  - [ ] Auth API
       - [x] login
+      - [ ] register
+      - [ ] logout
  - [ ] Auth API hook
- - [ ] Auth state & context
- - [ ] Login
+      - [ ] login
+      - [ ] register
+      - [ ] logout
+ - [x] Auth state & context
+ - [x] Token management
+ - [x] Login
  - [ ] Register
  - [ ] Logout
+ - [ ] Authorized Requests
   
   ## 7. UI implementation
  - [ ] Dynamic Navigation
