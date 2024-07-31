@@ -50,6 +50,7 @@ SoftUni React Project
  - [x] Token management
  - [x] Login
  - [ ] Register
+      - [ ] Add form validation
  - [ ] Logout
  - [ ] Authorized Requests
   
