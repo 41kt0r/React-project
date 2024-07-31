@@ -36,7 +36,7 @@ export default function Login() {
                                     name="email"
                                     value={values.email}
                                     onChange={changeHandler}
-                                    placeholder="Username"
+                                    placeholder="Email"
                                     required />
                                 <i className="fa-solid fa-user"></i>
                             </div>
