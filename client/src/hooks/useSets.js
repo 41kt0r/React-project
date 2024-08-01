@@ -7,7 +7,7 @@ export function useGetAllSets() {
 
     useEffect(() => {
         setsApi.getAll()
-            .then(result => setSets(result)) 
+            .then(result => setSets(result))
     }, []);
 
     return [sets, setSets];
@@ -29,4 +29,11 @@ export function useGetOneSets(setId) {
         set,
         setSet,
     ];
+}
+
+export function useCreateSet() {
+    const setCreateHandler = (setData) =>
+        setsApi.create(setData);
+
+    return setCreateHandler;
 }
