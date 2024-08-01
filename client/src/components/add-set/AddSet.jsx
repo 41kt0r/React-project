@@ -19,7 +19,7 @@ export default function setCreate() {
         try {
             const { _id: setId } = await createSet(values);
 
-            navigate(`/sets/${setId}/details`)
+            navigate(`/catalog/${setId}/details`)
         } catch (err) {
             //set error state and display error
             console.log(err.message);
@@ -64,7 +64,7 @@ export default function setCreate() {
                             </div>
 
                             <div className="input-box">
-                                <input type="text" maxLength="150" name="description" value={values.description} onChange={changeHandler} placeholder="Description" required />
+                                <input type="text" maxLength="1500" name="description" value={values.description} onChange={changeHandler} placeholder="Description" required />
                                 <i className="fa-solid fa-pen"></i>
                             </div>
 

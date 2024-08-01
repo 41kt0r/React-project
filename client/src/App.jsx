@@ -12,9 +12,13 @@ import HookahDetails from "./components/hookah-details/HookahDetails"
 import { AuthContext } from "./contexts/AuthContext"
 
 function App() {
+  //TODO: remove this from App component
   const [authState, setAuthState] = useState({});
 
   const changeAuthState = (state) => {
+    //TODO: Quick solution, fix by implementing persisted auth state
+    localStorage.setItem('accessToken', state.accessToken)
+
     setAuthState(state)
   }
 

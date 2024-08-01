@@ -49,13 +49,13 @@ SoftUni React Project
  - [x] Auth state & context
  - [x] Token management
  - [x] Login
- - [ ] Register
+ - [x] Register
       - [x] Add form validation
  - [ ] Logout
- - [ ] Authorized Requests
+ - [x] Authorized Requests
   
   ## 7. UI implementation
  - [x] Dynamic Navigation
- - [ ] Create set
-     - [ ] API function
-     - [ ] Create hook
+ - [x] Create set
+     - [x] API function
+     - [x] Create hook
