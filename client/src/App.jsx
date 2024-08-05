@@ -10,6 +10,8 @@ import Catalog from "./components/catalog/Catalog"
 import AddSet from "./components/add-set/AddSet"
 import HookahDetails from "./components/hookah-details/HookahDetails"
 import { AuthContext } from "./contexts/AuthContext"
+import Edit from "./components/set-edit/Edit"
+import RouteGuard from "./components/common/RouteGuard"
 
 function App() {
   //TODO: remove this from App component
@@ -41,7 +43,11 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/catalog/:setId/details" element={<HookahDetails />} />
-          <Route path="/addSet" element={<AddSet />} />
+          <Route element={<RouteGuard />}>
+            <Route path="/addSet" element={<AddSet />} />
+            <Route path="/catalog/:setId/edit" element={<Edit />} />
+            {/* //logout */}
+          </Route>
 
         </Routes>
 

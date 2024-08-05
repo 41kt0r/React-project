@@ -1,10 +1,31 @@
-import {  useState } from "react";
-import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { useGetOneSets } from "../../hooks/useSets";
+import { AuthContext } from "../../contexts/AuthContext";
+import setsApi from "../../api/sets-api";
+import { Link } from "react-router-dom";
 
 export default function HookahDetails() {
-    const {setId} = useParams()
+    const navigate = useNavigate();
+    const { setId } = useParams()
     const [set, setSet] = useGetOneSets(setId);
+    // const { email, userId } = AuthContext();
+
+
+    const setDeleteHandler = async () => {
+        const isConfirmed = confirm(`Are you sure you want to delete ${set.hookah} set?`)
+        
+        if (!isConfirmed) {
+            return
+        }
+        try {
+            await setsApi.remove(setId);
+            navigate('/')
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+    // const isOwner = userId === set._ownerId
 
     return (
         <div className="detailsWrapper">
@@ -57,9 +78,16 @@ export default function HookahDetails() {
 
                         </div>
 
-                        <div className="guest__buttons">
-                            <button className="detBtn">Edit</button>
+                        {/* {isOwner && (
+                            
+                        )} */}
+
+                        <div className="owner__buttons">
+                            <Link to={`/catalog/${setId}/edit`} className="detBtn">Edit</Link>
+                            <button onClick={setDeleteHandler} className="detBtn">Delete</button>
                         </div>
+
+
                     </div>
                 </div>
             </main>

@@ -11,12 +11,19 @@
  };
 
  export const getOne = (setId) => request.get(`${BASE_URL}/${setId}`);
+
  export const create = (setData) => request.post(`${BASE_URL}`, setData);
  
+ export const remove = (setId) => request.del(`${BASE_URL}/${setId}`);
+
+ export const update = (setId, setData) => request.put(`${BASE_URL}/${setId}`, setData)
+
  const setsApi = {
     getAll,
     getOne,
-    create
+    create,
+    remove,
+    update,
  }
 
  export default setsApi;
