@@ -38,14 +38,14 @@ SoftUni React Project
  - [x] SetApi hooks
 
 ## 6. Authentication
- - [ ] Auth API
+ - [x] Auth API
       - [x] login
       - [x] register
-      - [ ] logout
- - [ ] Auth API hook
+      - [x] logout
+ - [x] Auth API hook
       - [x] login
       - [x] register
-      - [ ] logout
+      - [x] logout
  - [x] Auth state & context
  - [x] Token management
  - [x] Login
@@ -59,3 +59,11 @@ SoftUni React Project
  - [x] Create set
      - [x] API function
      - [x] Create hook
+
+
+  ## 8. TODO
+   - [ ] Route gouards
+   - [ ] requierments for all fields in forms
+   - [ ] like to work
+   - [ ] guest author and visitor functionalities
+   - [ ] Description for GitHub
