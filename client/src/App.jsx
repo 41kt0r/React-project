@@ -13,6 +13,7 @@ import { AuthContextProvider } from "./contexts/AuthContext"
 import Edit from "./components/set-edit/Edit"
 import RouteGuard from "./components/common/RouteGuard"
 import Logout from "./components/logout/Logout"
+import NotFound from "./components/not-found/NotFound"
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/logout" element={<Logout />}/>
           {/* </Route> */}
 
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />

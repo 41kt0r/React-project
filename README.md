@@ -67,3 +67,4 @@ SoftUni React Project
    - [ ] like to work
    - [ ] guest author and visitor functionalities
    - [ ] Description for GitHub
+   - [x] Error 404 component
