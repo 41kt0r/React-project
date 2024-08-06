@@ -14,24 +14,6 @@ import Edit from "./components/set-edit/Edit"
 import RouteGuard from "./components/common/RouteGuard"
 
 function App() {
-  //TODO: remove this from App component
-  // const [authState, setAuthState] = useState({});
-
-  // const changeAuthState = (state) => {
-  //   //TODO: Quick solution, fix by implementing persisted auth state
-  //   localStorage.setItem('accessToken', state.accessToken)
-
-  //   setAuthState(state)
-  // }
-
-  // const contextData = {
-  //   userId: authState._id,
-  //   email: authState.email,
-  //   accessToken: authState.accessToken,
-  //   isAuthenticated: !!authState.email,
-  //   changeAuthState,
-  // };
-
   return (
     <AuthContextProvider >
       <>
