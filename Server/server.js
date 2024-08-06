@@ -1651,7 +1651,7 @@
                 bowl: "oblako",
                 HMD: "flumant",
                 imageUrl: "https://www.tejar.pk/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/s/h/shishabucks_cloud_micro_hookah_-_black_-_tejar_1.jpg",
-                price: "199$",
+                price: "199",
                 likes: "1",
                 description: "Комбинирайте модерното наргиле Shishabucks с висококачествената чашка Oblako за върховно наргиле изживяване. Shishabucks предлага стилен и издръжлив дизайн от алуминий и акрил, докато ръчно изработените глинени чашки Oblako осигуряват равномерно разпределение на топлината за дълготрайно и плавно пушене. Тази комбинация съчетава най-доброто от двата свята – функционалност и естетика.",
                 _id: "4aa88b12-3919-4aa2-8fd8-e7fe4a5eb7c5"
@@ -1663,7 +1663,7 @@
                 bowl: "Dschinni",
                 HMD: "Octopuz Plankton",
                 imageUrl: "https://www.hookahvault.com/cdn/shop/products/Oduman1.jpg?v=1677110976",
-                price: "99$",
+                price: "99",
                 likes: "2",
                 description: "Комбинирайте компактното наргиле Oduman N2 Nano с чашка Dschinni и коронка Octopuz Plankton за изключително наргиле изживяване. Oduman N2 Nano предлага стилен дизайн и преносимост, докато чашката Dschinni осигурява отлична топлопроводимост. Коронката Octopuz Plankton подобрява разпределението на топлината за по-дълги сесии.",
                 _id: "4894ba44-8348-416c-9667-3457a002a958"
