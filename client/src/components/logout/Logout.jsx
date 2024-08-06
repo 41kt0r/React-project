@@ -1,27 +1,13 @@
-// directno copiran i ne raboti
-import { useContext, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
-
-import * as authService from '../../services/authService';
-import Path from "../../paths";
-import { AuthContext } from "../../contexts/AuthContext";
+import { Navigate } from 'react-router-dom'
+import { useLogout } from '../../hooks/useAuth';
+import { useEffect } from 'react';
 
 export default function Logout() {
-    const navigate = useNavigate();
-    const { logoutHandler } = useContext(AuthContext);
+    const logout = useLogout();
 
     useEffect(() => {
-        authService.logout()
-            .then(() =>{
-                logoutHandler();
-                navigate(Path.Home);
-            })
-            .catch((error) => {
-                logoutHandler();
-                navigate(Path.Home);
-                console.log(error.message);
-            });
-
+        logout();
     }, []);
-    return null;
+
+    return (<Navigate to='/' />);
 }

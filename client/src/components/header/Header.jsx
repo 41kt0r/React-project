@@ -20,7 +20,7 @@ export default function Header() {
                             ? (
                                 <div className="navigation-div user">
                                     <li><Link to="/addSet">Add set</Link></li>
-                                    <li><Link to="#">Logout</Link></li>
+                                    <li><Link to="/logout">Logout</Link></li>
                                 </div>
                             )
                             : (

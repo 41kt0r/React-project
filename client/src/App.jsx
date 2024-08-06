@@ -12,6 +12,7 @@ import HookahDetails from "./components/hookah-details/HookahDetails"
 import { AuthContextProvider } from "./contexts/AuthContext"
 import Edit from "./components/set-edit/Edit"
 import RouteGuard from "./components/common/RouteGuard"
+import Logout from "./components/logout/Logout"
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
           {/* <Route element={<RouteGuard />}> */}
             <Route path="/addSet" element={<AddSet />} />
             <Route path="/catalog/:setId/edit" element={<Edit />} />
-            {/* //logout */}
+            <Route path="/logout" element={<Logout />}/>
           {/* </Route> */}
 
         </Routes>
