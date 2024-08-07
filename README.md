@@ -12,9 +12,9 @@ email: peter@abv.bg
 
 password: 123456
 
-email: admin@abv.bg
+email: george@abv.bg
 
-password: admin
+password: 123456
 
 SoftUni other requirements:
 
