@@ -17,12 +17,10 @@ export const useRegister = () => {
     const { changeAuthState } = useAuthContext();
 
     const registerHandler = async (email, password) => {
-        //Показва паролата в state: да се измисли начин да не го прави!
         const { password: _, ...authData} = await register(email, password);
 
         changeAuthState(authData);
         return authData; 
-        // До тук
     };  
 
     return registerHandler;
