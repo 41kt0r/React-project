@@ -6,11 +6,16 @@
 body {
   padding: 0;
   margin: 0;
+  
 }
 
 #notfound {
   position: relative;
-  height: 100vh;
+  min-height: 89vh; 
+  background: #acec15;
+    background: conic-gradient(from 315deg, #acec15, #010101);
+    background-size: cover;
+    background-position: center;
 }
 
 #notfound .notfound {
@@ -75,14 +80,15 @@ body {
   color: #fff;
   text-transform: uppercase;
   padding: 13px 23px;
-  background: #ff6300;
+  background: #acec15;
   font-size: 18px;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
+  border-radius: 40px;
 }
 
 .notfound a:hover {
-  color: #ff6300;
+  background: #acec15;
   background: #211b19;
 }
 
