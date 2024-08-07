@@ -48,6 +48,7 @@ export default function Register() {
                                 name="email"
                                 value={values.email}
                                 onChange={changeHandler}
+                                autoComplete="email"
                                 required />
                                 <i className="fa-solid fa-user"></i>
                             </div>
@@ -64,6 +65,7 @@ export default function Register() {
                                 name="password"
                                 value={values.password}
                                 onChange={changeHandler}
+                                autoComplete="password"
                                 required />
                                 <i className="fa-solid fa-key"></i>
                             </div>
@@ -75,6 +77,7 @@ export default function Register() {
                                 name="rePassword"
                                 value={values.rePassword}
                                 onChange={changeHandler}
+                                autoComplete="password"
                                 required />
                                 <i className="fa-solid fa-key"></i>
                             </div>
