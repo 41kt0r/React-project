@@ -30,7 +30,7 @@ body {
 .homeWrapper {
     display: flex;
     flex-direction: column;
-    min-height: 88.3vh;
+    min-height: 89vh;
 
     
 }
