@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useLogin } from "../../hooks/useAuth";
 import { useForm } from "../../hooks/useForm";
 
@@ -60,7 +60,7 @@ export default function Login() {
                             <button type="submit" className="btn">Login</button>
 
                             <div className="register-login-link">
-                                <p>Don't have an acount <a href="#">Register</a></p>
+                                <p>Don't have an acount <Link to="/register">Register</Link></p>
                             </div>
                         </form>
                     </div>

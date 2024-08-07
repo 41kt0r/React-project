@@ -11,7 +11,7 @@ import AddSet from "./components/add-set/AddSet"
 import HookahDetails from "./components/hookah-details/HookahDetails"
 import { AuthContextProvider } from "./contexts/AuthContext"
 import Edit from "./components/set-edit/Edit"
-import RouteGuard from "./components/common/RouteGuard"
+import {GuestRouteGuard, UserRouteGuard} from "./components/common/RouteGuard"
 import Logout from "./components/logout/Logout"
 import NotFound from "./components/not-found/NotFound"
 
@@ -22,15 +22,22 @@ function App() {
         <Header />
 
         <Routes >
+          {/* For any visitor*/}
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/catalog/:setId/details" element={<HookahDetails />} />
-          <Route element={<RouteGuard />}>
-            <Route path="/logout" element={<Logout />}/>
+
+          {/* For gouests */}
+          <Route element={<GuestRouteGuard />}>
+            <Route path="/logout" element={<Logout />} />
             <Route path="/addSet" element={<AddSet />} />
             <Route path="/catalog/:setId/edit" element={<Edit />} />
+          </Route>
+
+          {/* For users */}
+          <Route element={<UserRouteGuard />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Route>
 
           <Route path="*" element={<NotFound />} />

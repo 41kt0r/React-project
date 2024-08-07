@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useRegister } from "../../hooks/useAuth";
 import { useForm } from "../../hooks/useForm";
 import { useState } from "react";
@@ -94,7 +94,7 @@ export default function Register() {
                             <button type="submit" className="btn">Register</button>
 
                             <div className="register-login-link">
-                                <p>Alredy have an acount <a href="#">Login</a></p>
+                                <p>Alredy have an acount <Link to="/login">Login</Link></p>
                             </div>
                         </form>
                     </div>

@@ -62,7 +62,7 @@ SoftUni React Project
 
 
   ## 8. TODO
-   - [ ] Route gouards
+   - [x] Route gouards
    - [ ] requierments for all fields in forms
    - [ ] like to work
    - [x] guest author and visitor functionalities
