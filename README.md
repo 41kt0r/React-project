@@ -65,6 +65,6 @@ SoftUni React Project
    - [ ] Route gouards
    - [ ] requierments for all fields in forms
    - [ ] like to work
-   - [ ] guest author and visitor functionalities
+   - [x] guest author and visitor functionalities
    - [ ] Description for GitHub
    - [x] Error 404 component

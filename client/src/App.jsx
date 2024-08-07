@@ -27,11 +27,11 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/catalog/:setId/details" element={<HookahDetails />} />
-          {/* <Route element={<RouteGuard />}> */}
+          <Route element={<RouteGuard />}>
+            <Route path="/logout" element={<Logout />}/>
             <Route path="/addSet" element={<AddSet />} />
             <Route path="/catalog/:setId/edit" element={<Edit />} />
-            <Route path="/logout" element={<Logout />}/>
-          {/* </Route> */}
+          </Route>
 
           <Route path="*" element={<NotFound />} />
         </Routes>

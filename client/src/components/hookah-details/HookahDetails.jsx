@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useGetOneSets } from "../../hooks/useSets";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useAuthContext } from "../../contexts/AuthContext";
 import setsApi from "../../api/sets-api";
 import { Link } from "react-router-dom";
 
@@ -9,12 +9,13 @@ export default function HookahDetails() {
     const navigate = useNavigate();
     const { setId } = useParams()
     const [set, setSet] = useGetOneSets(setId);
-    // const { email, userId } = AuthContext();
+    const { email, userId } = useAuthContext();
+    const { isAuthenticated } = useAuthContext();
 
 
     const setDeleteHandler = async () => {
         const isConfirmed = confirm(`Are you sure you want to delete ${set.hookah} set?`)
-        
+
         if (!isConfirmed) {
             return
         }
@@ -25,7 +26,7 @@ export default function HookahDetails() {
             console.log(err.message);
         }
     }
-    // const isOwner = userId === set._ownerId
+    const isOwner = userId === set._ownerId
 
     return (
         <div className="detailsWrapper">
@@ -41,10 +42,11 @@ export default function HookahDetails() {
                             <p>{set.likes}</p>
                         </div>
                         <div className="details__button">
-                            <div className="owner__buttons">
-                                <button className="detBtn">Like</button>
-                                {/* <!-- <button className="detBtn">Coment</button> --> */}
-                            </div>
+                            {!isOwner && isAuthenticated && (
+                                <div className="owner__buttons">
+                                    <button className="detBtn">Like</button>
+                                </div>
+                            )}
 
                         </div>
                     </div>
@@ -78,14 +80,14 @@ export default function HookahDetails() {
 
                         </div>
 
-                        {/* {isOwner && (
-                            
-                        )} */}
+                        {isOwner && (
+                            <div className="owner__buttons">
+                                <Link to={`/catalog/${setId}/edit`} className="detBtn">Edit</Link>
+                                <button onClick={setDeleteHandler} className="detBtn">Delete</button>
+                            </div>
 
-                        <div className="owner__buttons">
-                            <Link to={`/catalog/${setId}/edit`} className="detBtn">Edit</Link>
-                            <button onClick={setDeleteHandler} className="detBtn">Delete</button>
-                        </div>
+                        )}
+
 
 
                     </div>
