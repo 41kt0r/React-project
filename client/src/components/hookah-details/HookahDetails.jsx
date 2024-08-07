@@ -1,36 +1,62 @@
-import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useGetOneSets } from "../../hooks/useSets";
+import { useEffect, useState } from "react";
+
+import * as likesService from '../../services/likeService';
+
 import { useAuthContext } from "../../contexts/AuthContext";
 import setsApi from "../../api/sets-api";
-import { Link } from "react-router-dom";
 
 export default function HookahDetails() {
     const navigate = useNavigate();
-    const { setId } = useParams()
+    const { setId } = useParams();
     const [set, setSet] = useGetOneSets(setId);
     const { email, userId } = useAuthContext();
     const { isAuthenticated } = useAuthContext();
+    const [likesAmount, setLikesAmount] = useState(0);
+    const [like, setLike] = useState(false);
 
+    useEffect(() => {
+        likesService.allLikesForItem(setId)
+            .then(likes => {
+                setLikesAmount(likes.length);
+
+                if (likes.find(x => x._ownerId === userId)) {
+                    setLike(true);
+                }
+            })
+            .catch(err => console.log(err));
+    }, [setId, userId]);
+
+    const isOwner = userId === set._ownerId;
+
+    const likeHandle = async () => {
+        try {
+            await likesService.likeItem(setId);
+            setLikesAmount(prev => prev + 1);
+            setLike(true);
+        } catch (err) {
+            console.log(err);
+        }
+    }
 
     const setDeleteHandler = async () => {
-        const isConfirmed = confirm(`Are you sure you want to delete ${set.hookah} set?`)
+        const isConfirmed = confirm(`Are you sure you want to delete ${set.hookah} set?`);
 
         if (!isConfirmed) {
-            return
+            return;
         }
         try {
             await setsApi.remove(setId);
-            navigate('/')
+            navigate('/');
         } catch (err) {
             console.log(err.message);
         }
     }
-    const isOwner = userId === set._ownerId
 
     return (
         <div className="detailsWrapper">
-
             <main className="details-main">
                 <div className="cardInfo">
                     <div className="imageAndButtons">
@@ -39,15 +65,19 @@ export default function HookahDetails() {
                         </div>
                         <div className="card__likes">
                             <p>Likes:</p>
-                            <p>{set.likes}</p>
+                            <p>{likesAmount}</p>
                         </div>
                         <div className="details__button">
-                            {!isOwner && isAuthenticated && (
+                            {!isOwner && isAuthenticated && !like && (
                                 <div className="owner__buttons">
-                                    <button className="detBtn">Like</button>
+                                    <button 
+                                        className="detBtn" 
+                                        onClick={likeHandle}
+                                    >
+                                        Like
+                                    </button>
                                 </div>
                             )}
-
                         </div>
                     </div>
                     <div className="details__info">
@@ -56,28 +86,22 @@ export default function HookahDetails() {
                                 <h5>HOOKAH</h5>
                                 <p>{set.hookah}</p>
                             </div>
-
                             <div>
                                 <h5>BOWL</h5>
                                 <p>{set.bowl}</p>
                             </div>
-
                             <div>
                                 <h5>HMD</h5>
                                 <p>{set.HMD}</p>
                             </div>
-
                             <div>
                                 <h5>DESCRIPTION</h5>
                                 <p>{set.description}</p>
                             </div>
-
                             <div>
                                 <h5>Price</h5>
                                 <p>{set.price}</p>
                             </div>
-
-
                         </div>
 
                         {isOwner && (
@@ -85,11 +109,7 @@ export default function HookahDetails() {
                                 <Link to={`/catalog/${setId}/edit`} className="detBtn">Edit</Link>
                                 <button onClick={setDeleteHandler} className="detBtn">Delete</button>
                             </div>
-
                         )}
-
-
-
                     </div>
                 </div>
             </main>
