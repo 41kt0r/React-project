@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useLogin } from "../../hooks/useAuth";
 import { useForm } from "../../hooks/useForm";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const initialValues = { email: '', password: '' };
 
@@ -36,6 +36,7 @@ export default function Login() {
 
         try {
             await login(email, password);
+            localStorage.setItem('showAlert', 'true');
             navigate('/');
         } catch (err) {
             setErrorMessage(err.message);
@@ -46,6 +47,14 @@ export default function Login() {
         initialValues,
         loginHandler
     );
+
+
+    useEffect(() => {
+        if (localStorage.getItem('showAlert') === 'true') {
+            alert('By logging into this site, I declare that I am over 18 years old.');
+            localStorage.removeItem('showAlert'); 
+        }
+    }, []);
 
     return (
         <div className="loginRegisterWrapper">
