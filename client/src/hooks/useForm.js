@@ -7,8 +7,6 @@ export function useForm(initialValues, submitCallback) {
         setValues(initialValues)
     }, [initialValues])
 
-
-    //TODO: add support for chekbox
     const changeHandler = (e) => {
         setValues(state => ({
             ...state,
